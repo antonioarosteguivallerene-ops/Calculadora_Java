@@ -51,10 +51,3 @@ app-calculadora-js/
 | 38. Programar las funciones | `calcular`, `resolver`, `elegirOperador`, etc. |
 | 39. Probar la aplicación | Pruebas manuales en el navegador |
 
-## Subirlo a GitHub
-
-```bash
-git remote add origin https://github.com/<tu-usuario>/<tu-repositorio>.git
-git branch -M main
-git push -u origin main
-```
