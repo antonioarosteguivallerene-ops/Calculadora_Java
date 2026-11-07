@@ -1,0 +1,149 @@
+/* Lección 35: aplicando los estilos */
+
+:root {
+  --fondo: #0f172a;
+  --panel: #1e293b;
+  --visor: #0b1220;
+  --texto: #f1f5f9;
+  --texto-suave: #94a3b8;
+  --numero: #334155;
+  --numero-hover: #475569;
+  --accion: #64748b;
+  --operador: #2563eb;
+  --operador-hover: #3b82f6;
+  --igual: #16a34a;
+  --igual-hover: #22c55e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  padding: 16px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.calculadora {
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Visor */
+.visor {
+  background: var(--visor);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  text-align: right;
+  min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.historial {
+  min-height: 20px;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  word-break: break-all;
+}
+
+.pantalla {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+/* Botones en cuadrícula de 4 columnas */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--texto);
+  background: var(--numero);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 0;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease;
+}
+
+button:hover {
+  background: var(--numero-hover);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.accion {
+  background: var(--accion);
+}
+
+.accion:hover {
+  background: #7b8aa0;
+}
+
+.operador {
+  background: var(--operador);
+}
+
+.operador:hover {
+  background: var(--operador-hover);
+}
+
+#igual {
+  background: var(--igual);
+  grid-row: span 2;
+}
+
+#igual:hover {
+  background: var(--igual-hover);
+}
+
+#cero {
+  grid-column: span 2;
+}
+
+.pie {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}

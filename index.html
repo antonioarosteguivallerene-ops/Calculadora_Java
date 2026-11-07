@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Calculadora - JavaScript</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="contenedor">
+    <h1 class="titulo">Calculadora</h1>
+
+    <!-- Lección 34: maquetando la vista de la App -->
+    <div class="calculadora" role="application" aria-label="Calculadora">
+
+      <div class="visor">
+        <div id="historial" class="historial" aria-live="polite"></div>
+        <div id="pantalla" class="pantalla" aria-live="polite">0</div>
+      </div>
+
+      <div class="botones">
+        <button id="limpiar" class="accion" aria-label="Limpiar todo">C</button>
+        <button id="borrar" class="accion" aria-label="Borrar último dígito">&#9003;</button>
+        <button class="operador" data-operador="/" aria-label="Dividir">&divide;</button>
+        <button class="operador" data-operador="*" aria-label="Multiplicar">&times;</button>
+
+        <button class="numero">7</button>
+        <button class="numero">8</button>
+        <button class="numero">9</button>
+        <button class="operador" data-operador="-" aria-label="Restar">&minus;</button>
+
+        <button class="numero">4</button>
+        <button class="numero">5</button>
+        <button class="numero">6</button>
+        <button class="operador" data-operador="+" aria-label="Sumar">+</button>
+
+        <button class="numero">1</button>
+        <button class="numero">2</button>
+        <button class="numero">3</button>
+        <button id="igual" aria-label="Igual">=</button>
+
+        <button class="numero" id="cero">0</button>
+        <button id="punto" aria-label="Punto decimal">.</button>
+      </div>
+    </div>
+
+    <p class="pie">Proyecto del curso <em>JavaScript: Introducción a la programación</em></p>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
